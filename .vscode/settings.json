@@ -1,0 +1,26 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "chat.instructionsFilesLocations": {
+    ".github/instructions": true
+  },
+  "chat.includeApplyingInstructions": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.exclude": {
+    "node_modules": true,
+    "dist": true,
+    "build": true
+  },
+  "search.exclude": {
+    "node_modules": true,
+    "dist": true,
+    "test-results": true,
+    "playwright-report": true
+  },
+  "playwright.reuseBrowser": false
+}
