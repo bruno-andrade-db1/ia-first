@@ -1,5 +1,5 @@
 ---
-name: qa-cenario-e2e
+name: qa-playwright-cenarios-e2e
 description: "Use when: criar testes E2E Playwright a partir de historias, requisitos ou criterios de aceite. Gera cenarios Given/When/Then, casos positivos e negativos, e codigo TypeScript no padrao do projeto (tests/e2e, fixtures em tests/fixtures, describe/beforeEach, Arrange/Act/Assert)."
 ---
 

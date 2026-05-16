@@ -1,5 +1,5 @@
 ---
-name: qa-anti-flaky
+name: qa-playwright-anti-flaky
 description: "Use when: reduzir flakiness em testes Playwright, estabilizar suite E2E, melhorar locators e sincronizacao, revisar timeouts/retries e eliminar dependencias de timing. Indicado para falhas intermitentes em local ou CI."
 ---
 

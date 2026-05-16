@@ -12,7 +12,8 @@
     "test:firefox": "playwright test --project=firefox",
     "test:webkit": "playwright test --project=webkit",
     "codegen": "playwright codegen https://example.com",
-    "report": "playwright show-report"
+    "report": "playwright show-report",
+    "test:coverage": "playwright test --coverage"
   },
   "keywords": [
     "playwright",
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@playwright/test": "^1.46.0",
     "@types/node": "^20.19.41",
-    "dotenv": "^17.4.2"
+    "dotenv": "^17.4.2",
+    "sonarqube-scanner": "^4.3.6"
   }
 }

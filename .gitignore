@@ -36,6 +36,9 @@ playwright/.cache/
 coverage/
 .nyc_output/
 
+# Sonar Scanner
+.scannerwork/
+
 # Temporary files
 tmp/
 temp/

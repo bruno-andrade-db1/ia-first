@@ -67,9 +67,9 @@ O projeto segue uma arquitetura modular de automação de testes, estruturada em
   - Regras de testes E2E Playwright
   - Padrões de nomenclatura e estrutura
 - **skills/** - Skills de domínio específico
-  - `qa-anti-flaky/` - Redução de flakiness em testes
-  - `qa-cenario-e2e/` - Criação de testes E2E
-  - `qa-triagem-falhas/` - Investigação de falhas
+  - `qa-playwright-anti-flaky/` - Redução de flakiness em testes
+  - `qa-playwright-cenarios-e2e/` - Criação de testes E2E
+  - `qa-playwright-triagem-falhas/` - Investigação de falhas
 - **workflows/** - Pipelines de CI/CD com GitHub Actions
 
 #### 4. **playwright-report/**
@@ -163,21 +163,21 @@ Trace on first retry
 
 #### 2. **Skills** (`.github/skills/`)
 
-**qa-anti-flaky/**
+**qa-playwright-anti-flaky/**
 
 - Estratégias para reduzir flakiness em testes
 - Técnicas de estabilização de E2E
 - Melhoria de locators e sincronização
 - Otimização de timeouts/retries
 
-**qa-cenario-e2e/**
+**qa-playwright-cenarios-e2e/**
 
 - Criação de testes E2E a partir de histórias e requisitos
 - Geração de cenários Given/When/Then
 - Casos positivos e negativos
 - Padrões TypeScript do projeto
 
-**qa-triagem-falhas/**
+**qa-playwright-triagem-falhas/**
 
 - Investigação de falhas E2E
 - Análise de traces, screenshots e vídeos
@@ -201,9 +201,9 @@ ia-first/
 │   ├── instructions/
 │   │   └── testing.instructions.md        # Regras E2E
 │   ├── skills/
-│   │   ├── qa-anti-flaky/                 # Skill anti-flaky
-│   │   ├── qa-cenario-e2e/                # Skill criação cenários
-│   │   └── qa-triagem-falhas/             # Skill triagem de falhas
+│   │   ├── qa-playwright-anti-flaky/      # Skill anti-flaky
+│   │   ├── qa-playwright-cenarios-e2e/    # Skill criação cenários
+│   │   └── qa-playwright-triagem-falhas/  # Skill triagem de falhas
 │   └── workflows/
 │       └── playwright-tests.yml           # CI/CD GitHub Actions
 ├── tests/
@@ -456,9 +456,10 @@ Em caso de falha:
    - Seguir padrão Arrange/Act/Assert
 
 2. **Melhorar estabilidade:**
-   - Consultar skill `qa-anti-flaky`
-   - Revisar timeouts e retries
-   - Usar locators robustos
+
+- Consultar skill `qa-playwright-anti-flaky`
+- Revisar timeouts e retries
+- Usar locators robustos
 
 3. **Expandir cobertura:**
    - Criar novos domínios de teste

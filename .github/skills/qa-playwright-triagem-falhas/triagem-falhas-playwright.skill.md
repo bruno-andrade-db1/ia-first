@@ -1,5 +1,5 @@
 ---
-name: qa-triagem-falhas
+name: qa-playwright-triagem-falhas
 description: "Use when: investigar falhas E2E Playwright com base em erro, trace, screenshot, video e logs para gerar diagnostico, reproducao, severidade e bug report acionavel para time de produto/dev."
 ---
 
