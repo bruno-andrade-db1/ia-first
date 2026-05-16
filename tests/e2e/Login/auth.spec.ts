@@ -7,6 +7,7 @@ test.describe("Authentication Tests", () => {
   });
 
   test("should display login form", async ({ page }) => {
+    // Arrange
     await AuthHelper.openLoginModal(page);
 
     // Assert
@@ -15,13 +16,47 @@ test.describe("Authentication Tests", () => {
     await expect(page.locator("#login-button")).toBeVisible();
   });
 
-  test.only("should login successfully with valid credentials", async ({
+  test("should show validation alert when submitting without username and password", async ({
     page,
   }) => {
+    // Arrange
+    await AuthHelper.openLoginModal(page);
+
+    // Act
+    await page.locator("#login-button").click();
+
+    // Assert
+    await expect(
+      page.getByText("Digite seu e-mail ou nome do(a) usuário(a) e a senha.", {
+        exact: true,
+      }),
+    ).toBeVisible();
+  });
+
+  test("should show invalid credentials alert when submitting wrong username or password", async ({
+    page,
+  }) => {
+    // Arrange
+    await AuthHelper.openLoginModal(page);
+    const invalidUsername = "usuario.invalido";
+    const invalidPassword = "senha.invalida";
+
+    // Act
+    await AuthHelper.login(page, invalidUsername, invalidPassword);
+
+    // Assert
+    await expect(
+      page.getByText("Usuário(a), e-mail ou senha incorreta", { exact: true }),
+    ).toBeVisible();
+  });
+
+  test("should login successfully with valid credentials", async ({ page }) => {
+    // Arrange
     const email = process.env.AUTH_EMAIL || "";
     const password = process.env.AUTH_PASSWORD || "";
-
     await AuthHelper.openLoginModal(page);
+
+    // Act
     await AuthHelper.login(page, email, password);
 
     // Assert
