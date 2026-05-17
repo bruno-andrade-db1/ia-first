@@ -9,7 +9,7 @@ test.describe("First Tests", () => {
     expect(page.getByText("Welcome to ia-first-db1!").first()).toBeVisible();
   });
 
-  test("should navigate to about page", async ({ page }) => {
+  test("should navigate to about page", async ({}) => {
     // Exemplo: clicar em um link do Discourse (ajuste conforme necessário)
     // await page.click("text=Sobre");
     // Espera que a URL contenha "about" (ajuste conforme necessário)

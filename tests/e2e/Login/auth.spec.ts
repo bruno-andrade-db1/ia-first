@@ -27,7 +27,7 @@ test.describe("Authentication Tests", () => {
 
     // Assert
     await expect(
-      page.getByText("Digite seu e-mail ou nome do(a) usuário(a) e a senha.", {
+      page.getByText("Please enter your email or username, and password.", {
         exact: true,
       }),
     ).toBeVisible();
@@ -46,7 +46,7 @@ test.describe("Authentication Tests", () => {
 
     // Assert
     await expect(
-      page.getByText("Usuário(a), e-mail ou senha incorreta", { exact: true }),
+      page.getByText("Incorrect username, email or password", { exact: true }),
     ).toBeVisible();
   });
 
