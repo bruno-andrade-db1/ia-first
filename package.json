@@ -13,7 +13,8 @@
     "test:webkit": "playwright test --project=webkit",
     "codegen": "playwright codegen https://example.com",
     "report": "playwright show-report",
-    "test:coverage": "playwright test --coverage"
+    "test:coverage": "playwright test --coverage",
+    "sonar:scan": "node scripts/sonar-scan.js"
   },
   "keywords": [
     "playwright",

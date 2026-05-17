@@ -52,6 +52,31 @@ npx playwright install
 | `npm run test:webkit`  | Executa testes apenas no WebKit      |
 | `npm run codegen`      | Abre Codegen para gravar testes      |
 | `npm run report`       | Exibe o último relatório HTML        |
+| `npm run sonar:scan`   | Executa análise Sonar com `SONAR_TOKEN` |
+
+## 🔎 SonarCloud
+
+1. Defina o token em `.env.local` (recomendado para ambiente local):
+
+```bash
+SONAR_TOKEN="seu_novo_token"
+```
+
+2. Alternativamente, defina o token no terminal atual:
+
+```bash
+# Linux/Mac
+export SONAR_TOKEN="seu_novo_token"
+
+# Windows PowerShell
+$env:SONAR_TOKEN="seu_novo_token"
+```
+
+3. Execute a análise:
+
+```bash
+npm run sonar:scan
+```
 
 ## 📁 Estrutura do Projeto
 
@@ -125,6 +150,22 @@ test("logged in user test", async ({ authenticatedPage }) => {
 - **Traces**: Use `trace: 'on-first-retry'` para debugging detalhado
 
 ## 🚨 Troubleshooting
+
+### SonarQube/SonarCloud token exposto
+
+Nunca deixe token no arquivo `sonar-project.properties` ou em qualquer arquivo versionado.
+Use variável de ambiente:
+
+```bash
+# Linux/Mac
+export SONAR_TOKEN="seu_novo_token"
+
+# Windows PowerShell
+$env:SONAR_TOKEN="seu_novo_token"
+```
+
+Depois execute o scanner normalmente no mesmo terminal.
+Se um token antigo foi exposto, revogue no SonarCloud e gere um novo.
 
 ### Browsers não instalados
 
